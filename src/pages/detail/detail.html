@@ -1,0 +1,138 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{item.ticker}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="has-subheader">
+
+    <ion-card>
+      <ion-card-content>
+        <h3 style="font-weight:bold;text-align:center;margin-top:9px;">
+          {{item.name}}
+        </h3>
+      </ion-card-content>
+    </ion-card>
+
+<!--
+  <div class="bar bar-subheader bar-light">
+
+    <div class="buttons" side="left">
+      <div class="button button-clear">
+        <h6>Apple Inc.</h6>
+      </div>
+    </div>
+
+  <h2 class="title button-left button-right">1000.5000</h2>
+
+    <div class="buttons" side="right">
+      <div class="button button-clear">
+        <h6>+100.000%</h6>
+      </div>
+    </div>
+
+  </div>  -->
+
+  <ion-card>
+    <img src="assets/img/AAPL.jpg"/>
+    <ion-card-header style="text-align:center;">
+      Market Data
+    </ion-card-header>
+  <!--  <ion-card-content>
+      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+    </ion-card-content>  -->
+
+      <ion-list *ngFor="let items of stockInfo.data">
+        <ion-item>
+          {{stockInfo.column_names["0"]}}:
+          <ion-badge item-end>{{items["0"]}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          {{stockInfo.column_names["1"]}}:
+          <ion-badge item-end>{{items["1"]}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          {{stockInfo.column_names["2"]}}:
+          <ion-badge item-end>{{items["2"]}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          {{stockInfo.column_names["3"]}}:
+          <ion-badge item-end>{{items["3"]}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          {{stockInfo.column_names["4"]}}:
+          <ion-badge item-end>{{items["4"]}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          {{stockInfo.column_names["5"]}}:
+          <ion-badge item-end>{{items["5"]}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          {{stockInfo.column_names["6"]}}:
+          <ion-badge item-end>{{items["6"]}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          {{stockInfo.column_names["7"]}}:
+          <ion-badge item-end>{{items["7"]}}</ion-badge>
+        </ion-item>
+
+        <!--<ion-item>
+          Last refreshed:<br>
+           {{stockInfo.refreshed_at}}
+        </ion-item>-->
+      </ion-list>
+
+      <!--
+      <ion-card>
+        <ion-card-header>Chart</ion-card-header>
+        <ion-card-content>
+          <svg width="210.0" height="140.0" viewBox="-1 -1 42 27" preserveAspectRatio="none">
+            <path style="stroke: #0e99b9;" class="svg-line" d="M 40 13 L 39 8 L 38 10 L 38 8 L 37 10 L 36 11 L 35 11 L 34 12 L 33 10 L 33 6 L 32 9 L 31 8 L 30 6 L 29 8 L 29 8 L 28 4 L 27 5 L 26 4 L 25 5 L 24 3 L 24 2 L 23 2 L 22 3 L 21 0 L 20 1 L 20 4 L 19 9 L 18 10 L 17 11 L 16 15 L 16 16 L 15 14 L 14 11 L 13 11 L 12 11 L 11 12 L 11 15 L 10 15 L 9 15 L 8 19 L 7 20 L 7 20 L 6 23 L 5 23 L 4 24 L 3 25 L 2 24 L 2 23 L 1 23 L 0 23 " stroke="grey" fill="transparent">
+
+            </path>
+          </svg>
+        </ion-card-content>
+      </ion-card>
+    -->
+
+
+  </ion-card>
+
+
+<!-- NOTES
+  <ion-card>
+    <ion-card-header>
+      Notes
+    </ion-card-header>
+    <ion-card-content>
+
+      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+    </ion-card-content>
+  </ion-card>
+-->
+
+<!--
+  <ion-card>
+    <ion-card-header>
+      News
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <button ion-item>Headline 1</button>
+
+        <button ion-item>Headline 2</button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+-->
+</ion-content>
+
